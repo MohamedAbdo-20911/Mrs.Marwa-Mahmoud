@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>انضمام لمملكة اللغة العربية - ميس مروه محمود</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>👑 انضمام لمملكة اللغة العربية</h1>
+      <p class="sub">ميس مروه محمود — املأ البيانات واضغط "إرسال عبر الواتساب"</p>
+    </header>
+
+    <section class="card">
+      <form id="joinForm" autocomplete="off">
+        <label for="name">الاسم الكامل</label>
+        <input id="name" type="text" placeholder="مثال: أحمد محمد" required>
+
+        <label for="phone">رقم الهاتف</label>
+        <input id="phone" type="tel" placeholder="مثال: 010xxxxxxxx" required>
+
+        <label for="age">الفئة العمرية</label>
+        <select id="age" required>
+          <option value="">اختر الفئة</option>
+          <option value="أقل من 8 سنوات">أقل من 8 سنوات</option>
+          <option value="8 - 11 سنة">8 - 11 سنة</option>
+          <option value="12 - 15 سنة">12 - 15 سنة</option>
+          <option value="16 - 18 سنة">16 - 18 سنة</option>
+          <option value="19 سنة فأكثر">19 سنة فأكثر</option>
+        </select>
+
+        <label for="mode">نوع الحصة</label>
+        <select id="mode" required>
+          <option value="">اختر</option>
+          <option value="أونلاين">أونلاين</option>
+          <option value="أوفلاين">أوفلاين</option>
+        </select>
+
+        <label for="note">ملاحظة عن الطالب (اختياري)</label>
+        <textarea id="note" rows="3" placeholder="مثلاً: تواقيت مفضلة، مشاكل سمع أو..."></textarea>
+
+        <button id="sendBtn" type="button" class="primary">📩 إرسال البيانات عبر الواتساب</button>
+      </form>
+
+      <div class="qrArea">
+        <div class="qrBox" id="qrBox" aria-hidden="true">
+          <!-- نعرض رمز صغير يفتح نفس رابط واتساب (نولّد بالرسم البسيط) -->
+          <div class="qrIcon">⭳</div>
+        </div>
+        <p class="qrText">امسح (أو اضغط) لفتح واتساب المدرسة مباشرة</p>
+      </div>
+
+      <div id="info" class="info" hidden>
+        <p id="infoMsg"></p>
+        <a id="fallbackLink" href="#" target="_blank" class="link">فتح المحادثة</a>
+        <button id="copyBtn" class="ghost">نسخ نص الرسالة</button>
+      </div>
+    </section>
+
+    <footer class="foot">لو احتجت مساعدة ابعتلي صورة للخطأ وأنا أصلحها فوراً.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
